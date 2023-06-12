@@ -17,7 +17,13 @@ class _Menu1State extends State<Menu1> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Text("INI ADALAH MENU DISCOVERY")],
+          children: [
+            Text("INI ADALAH MENU DISCOVERY"),
+            SizedBox(height: 20,),
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).pushNamed('/menu2add');
+            }, child: Text('Go to Menu ADD'))
+          ],
         ),
       ),
     );
