@@ -17,7 +17,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int MenuSaatIni = 2;
 
-
   @override
   Widget build(BuildContext context) {
     List<Widget> widgets = [
@@ -28,22 +27,22 @@ class _MainPageState extends State<MainPage> {
       Menu5(),
     ];
     return Scaffold(
-
-      body: widgets[MenuSaatIni],
+        body: widgets[MenuSaatIni],
         bottomNavigationBar: ConvexAppBar(
-      items: [
-        TabItem(icon: Icons.map, title: 'Discovery'),
-        TabItem(icon: Icons.add, title: 'Add'),
-        TabItem(icon: Icons.home, title: 'Home'),
-        TabItem(icon: Icons.access_alarm, title: 'Notification'),
-        TabItem(icon: Icons.people, title: 'Profile'),
-      ],
-      initialActiveIndex: MenuSaatIni,
-      onTap: (int i) {
-        setState(() {
-          MenuSaatIni  = i ;
-        });
-      },
-    ));
+          items: [
+            TabItem(icon: Icons.map, title: 'Discovery'),
+            TabItem(icon: Icons.add, title: 'Add'),
+            TabItem(icon: Icons.home, title: 'Home'),
+            TabItem(icon: Icons.access_alarm, title: 'Notification'),
+            TabItem(icon: Icons.people, title: 'Profile'),
+          ],
+          initialActiveIndex: MenuSaatIni,
+          onTap: (int i) {
+            setState(() {
+              MenuSaatIni = i;
+            });
+          },
+        ),
+        );
   }
 }
